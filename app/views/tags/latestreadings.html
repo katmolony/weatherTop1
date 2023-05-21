@@ -1,0 +1,70 @@
+#{list items:_station, as:'_station'}
+<div class="columns">
+  <div class="column is-one-fifth">
+    <div class="card">
+      <div class="card-content">
+        <div class="content has-text-centered">
+          <h4>Station</h4>
+          <i class="fa-solid fa-location-crosshairs"></i>
+          <p>${_station.title}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="column is-one-fifth">
+
+    <div class="card">
+      <div class="card-content">
+        <div class="content has-text-centered">
+          <h4>Weather</h4>
+          <i class="fa-solid fa-cloud-sun"></i>
+          <p>${_station.latestCode()}</p>
+          <p>${_station.latestWeatherCode()}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="column is-one-fifth">
+
+    <div class="card">
+      <div class="card-content">
+        <div class="content has-text-centered">
+          <h4>Temperature</h4>
+          <i class="fa-solid fa-temperature-three-quarters"></i>
+          <p>${_station.latestTemperature()} C</p>
+          <p>${_station.latestFahrenheit()} F</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="column is-one-fifth">
+
+    <div class="card">
+      <div class="card-content">
+        <div class="content has-text-centered">
+          <h4>Wind</h4>
+          <i class="fa-solid fa-wind"></i>
+          <p>${_station.latestWindSpeed()}</p>
+          <p>${_station.latestBeaufort()} bft</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="column is-one-fifth">
+
+    <div class="card">
+      <div class="card-content">
+        <div class="content has-text-centered">
+          <h4>Pressure</h4>
+          <i class="fa-solid fa-water"></i>
+          <p>${_station.latestPressure()} hpa</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+#{/list}
